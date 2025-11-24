@@ -50,9 +50,7 @@ struct PokemonDetailRow: View {
                     Image(card.image)
                         .resizable()
                         .scaledToFit()
-                    // Ensure the image doesn't take up too much space
-                    // FIX: Added maxHeight to stabilize the Image size within the flexible HStack
-                        .frame(minWidth: 0, maxWidth: geometry.size.width / 3, maxHeight: 150)
+                        .frame(minWidth: 0, maxWidth: geometry.size.width / 3, minHeight: 150)
                         .background(Color.gray.opacity(0.1))
                         .cornerRadius(10)
                         .shadow(radius: 3)
