@@ -22,7 +22,7 @@ struct PokemonView: View {
                     }
                     ForEach(pokemon) { pokemonType in
                         NavigationLink(destination: {
-                            PokemonDetailView(pokemon: pokemonType)
+                            PokemonGridView(pokemon: pokemonType)
                         }, label: {
                             PokemonTypeRow(pokemonType: pokemonType)
                                 .padding(.bottom, 5)
